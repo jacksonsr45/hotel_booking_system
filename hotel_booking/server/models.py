@@ -1,23 +1,5 @@
 from django.db import models
 
-class role(models.Model):
-    id = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=200)
-
-
-class user(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
-    email = models.CharField(max_length=150)
-    password = models.CharField(max_length=200)
-    role_id = models.ForeignKey( role, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-
-class password_rest(models.Model):
-    pass
-
 
 class room(models.Model):
     id = models.AutoField(primary_key=True)
@@ -46,6 +28,7 @@ class booking(models.Model):
     deleted_at = models.TimeField(auto_now_add=True)
     category_id = models.ForeignKey( customer, on_delete=models.CASCADE)
     room_id = models.ForeignKey( room, on_delete=models.CASCADE)
+    amount_id = models.ForeignKey( amount_booking, on_delete=models.CASCADE)
 
 
 class categories(models.Model):
