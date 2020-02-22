@@ -1,4 +1,10 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.contrib.auth import login
+from django.contrib.auth import logout
+
 
 def home(request):
     title = 'Home'
@@ -18,6 +24,7 @@ def contact(request):
 def login_logout(request):
     title = 'Wellcome'
     return render( request, 'login_logout_create.html', {'title': title})
+
 
 
 def your_booking(request):

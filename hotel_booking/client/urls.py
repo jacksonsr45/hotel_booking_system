@@ -6,10 +6,11 @@ from .views import login_logout
 from .views import your_booking
 
 
+
 urlpatterns = [
-    path('', home),
-    path('sobre/', about),
-    path('contato/', contact),
-    path('login/', login_logout),
-    path('suas_reservas/', your_booking),
+    path('', home, name='home'),
+    path('sobre/', about, name='about'),
+    path('contato/', contact,name='contact'),
+    path('validation/', login_logout, name='validation'),
+    path('suas_reservas/', your_booking, name='your_booking'),
 ]
