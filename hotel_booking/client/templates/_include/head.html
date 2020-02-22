@@ -8,6 +8,26 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+
+        <!--Fontawesome CDN-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+        <!--Custom styles-->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style_login.css' %}">
+
+        
+        <style>
+            @import url("{% static 'fonts/SlGRmQmGupYAfH84ZhIh.woff2' %}");
+            .login{
+            background-image: url("{% static 'img/bg_login.jpeg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            font-family: 'Numans', sans-serif;
+            }
+        </style>
         
         <title>{% block title%}{{ title }}{% endblock %}</title>
     </head>
